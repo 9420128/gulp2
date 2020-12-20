@@ -1,3 +1,8 @@
+$black: #1b1d1f //
+$red: #e81f00
+$search-bg: #fafafa // Фон поиска
+$search-solid: #f3f3f3 // бордер поиска
+$nav-border-color: rgba(white,.2)
 
 .om-navbar
   color: #fff
@@ -6,6 +11,8 @@
   font-size: 14px
   line-height: 40px
   border-bottom: 1px solid black
+  background: $black
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06)
 
   &__wrap
     border-collapse: collapse
@@ -27,9 +34,6 @@
       padding: 0
       margin: 0
       display: inline-block
-
-      &:hover
-        opacity: .8
 
   &__left
     display: table-cell
@@ -57,15 +61,13 @@
       li:first-child
         margin-right: 12px
 
-.om-visible-hidden
-  visibility: hidden
-  opacity: 0
-
-
 .om-navbar a
   color: white
   transition: all 0.2s ease-in-out
   text-decoration: none
+
+  &:hover
+    opacity: .8
 
 .om-navbar__right a
   position: relative
@@ -93,18 +95,6 @@
 .geo-link:hover
   opacity: .8
 
-.inline-block
-  display: inline-block
-
-.position-relative, .navbarItemsContainer
-  position: relative
-
-.flex-between
-  display: flex
-  justify-content: space-between
-  align-items: center
-  height: 40px
-
 // выпадающий список
 .removedItemsList
   background-color: black
@@ -116,3 +106,113 @@
   margin: 0px
   right: 0px
   top: 41px
+
+  li.removed
+    border-top: 1px solid $nav-border-color
+    white-space: normal
+    text-align: left
+    display: block
+    float: none
+
+    a
+      line-height: 21px
+      padding: 8px 12px
+      display: block
+
+// header header header header
+
+.om-header
+  border-bottom: 1px solid #f3f3f3
+  background-color: #ffffff
+  //line-height: 90px
+  position: relative
+  min-width: 320px
+  height: 90px
+
+  &__wrap
+    display: table
+    table-layout: fixed
+    width: 100%
+
+  &__row
+    display: table-row
+
+.om-header__column, .om-header-search__column
+  display: table-cell
+  vertical-align: middle
+
+#logo
+  font-size: 22px
+  height: 90px
+  border: 0
+  display: table-cell
+  vertical-align: middle
+
+  a span
+    font-family: 'Rosario', Arial, sans-serif
+    font-weight: 700
+    color: $black
+    display: block
+    font-size: 1em
+    margin: 0
+    padding: 0
+    text-align: left
+    text-transform: uppercase
+    white-space: nowrap
+
+  small
+    display: block
+    margin-top: -14px
+    font-size: .5em
+    color: $red
+
+  .icon-basket
+    font-size: 1.4em
+    margin-left: -4px
+
+// Поиск
+.om-header__column
+  &:first-child
+    width: 230px
+
+  &:nth-child(2)
+    padding-right: 24px
+    //padding-left: 100px
+
+  &:nth-child(3)
+    width: 410px
+
+  &:last-child
+    text-align: right
+    width: 182px
+
+.om-header-search
+  border-radius: 50px
+  background-color: $search-bg
+  border: 1px solid $search-solid
+  height: 50px
+  color: red
+
+  &__wrap
+    border-collapse: collapse
+    table-layout: fixed
+    line-height: 50px
+    display: table
+    height: 50px
+    width: 100%
+
+  &__icon
+    font-size: 1.2em
+    color: rgba(0, 0, 0, 0.3)
+    padding-left: 12px
+
+.om-header-search__input
+  box-sizing: border-box
+  height: 50px
+  width: 100%
+  border: 0
+  background-color: $search-bg
+  text-overflow: ellipsis
+  transition: all 0.2s ease-in-out
+  color: #999
+

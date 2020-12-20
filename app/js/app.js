@@ -3,7 +3,7 @@ import $ from 'jquery'; window.jQuery = $; window.$ = $ // import module example
 // import Icons from 'uikit/dist/js/uikit-icons'
 // UIkit.use(Icons)
 
-import 'jsFiles/header'
+require('./jsFiles/header.js')
 
 
 

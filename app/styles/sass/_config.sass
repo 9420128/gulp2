@@ -30,10 +30,13 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 @include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
 @include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
 @include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+// Icon
+@include font('fontello', normal, normal, '../fonts/fontello/fontello.woff2')
+@import _icon
 
 // GENERAL DOCUMENT STYLES
 ::placeholder
-  color: #666
+  color: inherit
 
 ::selection
   background-color: $accent
@@ -41,6 +44,11 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 input, textarea
   outline: none
+  font: normal normal 13px "roboto_ltregular" ,sans-serif, arial
+  border: none
+  box-shadow: none
+  letter-spacing: inherit
+
   &:focus:required:invalid
     border-color: red
   &:required:valid
@@ -54,6 +62,9 @@ body
   min-width: 320px
   position: relative
   overflow-x: hidden
+
+*
+  box-sizing: content-box
 
   //*
   //  margin: 0
@@ -70,4 +81,3 @@ body
 
 
 
-@import libs

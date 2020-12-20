@@ -89,12 +89,11 @@ $(function(){
 
     $(document).on("click", closeDropDownMenu);
 
-    // $(document).on("ready", function(){
-    //     console.log(111);
-    //     resizeCacheWidth = $(window).width();
-    //     sliceMenuOnline(false);
-    //
-    // });
+    document.addEventListener('DOMContentLoaded', () =>{
+        resizeCacheWidth = $(window).width();
+        sliceMenuOnline(false);
+
+    });
 
     $(window).on("resize", function(event){
         //fix mobile scroll/resize lag

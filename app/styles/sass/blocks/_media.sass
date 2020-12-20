@@ -1,26 +1,104 @@
-@media (max-width: 420px)
-  .om-navbar__geo
-    right: -12px
-    z-index: 1
-    top: 74px
+@media (max-width: 1340px)
+  .om-header__column
+    &:first-child
+      width: 220px
+
+    &:nth-child(3)
+      width: 410px
+
+    &:last-child
+      width: 182px
+
+@media (max-width: 1240px)
+  .om-navbar__right
+    width: 340px
+
+  .om-header__column
+    &:nth-child(3)
+      width: 200px
+
+@media (max-width: 1150px)
+  .om-navbar__right
+    width: 380px
+
+@media (max-width: 1000px)
+  .om-navbar__right
+    width: 330px
+
+  .om-header
+    height: 164px
+
+  #headerSearch
+    box-sizing: border-box
+    position: absolute
+    padding: 0 24px
+    width: 100%
+    top: 90px
+    left: 0
+
+@media (max-width: 700px)
+  .om-navbar__right
+    width: 270px
+
+  .om-container
+    padding: 0
+
+  .om-header__column
+    &:first-child
+      width: 180px
+
+    &:nth-child(3)
+      width: 190px
+
+    &:last-child
+      width: 120px
+
+  #logo
+    padding: 0 12px
+
+@media (max-width: 600px)
+  .om-header__column
+    &:first-child
+      width: auto
+
+    &:last-child
+      width: 60px
+
+  &:nth-child(2)
+    display: inline
+
+  #logo
+    font-size: 20px
 
 @media (max-width: 640px)
   .om-navbar__geo
     position: absolute
     left: 62px
 
-@media (max-width: 700px)
-  .om-navbar__right
-    width: 150px
+  .removedItemsList
+    left: 0px
 
-@media (max-width: 1000px)
-  .om-navbar__right
-    width: 330px
+@media (max-width: 420px)
+  .om-navbar__geo
+    right: 12px
+    z-index: 1
+    top: 74px
 
-@media (max-width: 1150px)
-  .om-navbar__right
-    width: 380px
+    a
+      color: black
 
-@media (max-width: 1240px)
-  .om-navbar__right
-    width: 425px
+    .om-header__column:last-child
+      width: 0
+
+.om-header-search__input
+  padding-left: 12px
+
+
+
+
+
+
+
+
+
+
