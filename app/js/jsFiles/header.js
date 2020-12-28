@@ -24,7 +24,7 @@ $(function(){
             $sliceMenu.css({"visibility": "visible", "opacity" : 1});
         }
 
-        var menuMaxWidth = $(".om-navbar__left").width();
+        var menuMaxWidth = $(".navbar__left").width();
         var sumMenuItemsWidth = 70;
 
         if($(window).width() <= 700){

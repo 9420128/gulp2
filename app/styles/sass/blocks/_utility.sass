@@ -1,4 +1,4 @@
-.om-container
+.container
   padding: 0 24px
   max-width: 1920px
   min-width: 320px
@@ -11,27 +11,59 @@
 .position-relative, .navbarItemsContainer
   position: relative
 
-.flex
+.flex, .flex-between, .flex-center
   display: flex
+
+.flex-center
+  justify-content: center
+  align-items: center
 
 .flex-between
-  display: flex
   justify-content: space-between
   align-items: center
-  height: 40px
 
-.om-visible-hidden
+.visible-hidden
   visibility: hidden
   opacity: 0
 
+button
+  margin: 0
+  padding: 0
+  background-color: inherit
+  border: none
+  cursor: pointer
+  display: inline-block
 
-// Icon
-//.svg-inline
-//  overflow: visible
-//  display: inline-block
-//  font-size: inherit
-//  height: 1em
-//  vertical-align: -0.125em
-//
-//.w-18
-//  width: 1.125em
+.f-left
+  float: left
+
+[class*='w']
+  box-sizing: border-box
+  width: 100%
+  max-width: 100%
+
+.w-40
+  width: 40%
+
+.w-100
+  flex: 1
+  min-width: 1px
+
+.w-auto
+  width: auto
+// padding
+.p-m
+  padding: 18px
+
+// margin
+.m-l-xs
+  margin-left: 8px
+
+// color
+.c-m
+  color: #888
+
+.bg-m
+  background-color: #f3f3f3
+
+

@@ -1,0 +1,34 @@
+$border: #eeeeee // бордер
+$bg-m: #f9f9f9
+//
+.block
+  background-color: white
+  border: 1px solid $border
+  font-size: 12px
+  margin-bottom: 24px
+
+  a
+    color: black
+    text-decoration: underline
+    transition: all 0.2s ease
+    display: block
+
+    &:hover
+      color: red
+
+  &__footer
+    background-color: $bg-m
+    border-top: 1px solid $border
+
+// Заголовок
+a.block__head
+  font-size: 1.33em
+  height: 55px
+  line-height: 55px
+  padding: 0 24px
+  border-bottom: 1px solid $border
+  text-decoration: none
+
+  &:hover
+    color: inherit
+

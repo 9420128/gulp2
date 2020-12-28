@@ -1,0 +1,119 @@
+$black: #1b1d1f //
+$red: #e81f00
+$search-bg: #fafafa // Фон поиска
+$border: #eeeeee // бордер
+$nav-icon-color: #e4e4e4
+//$nav-icon-color: #e4e4e4
+$nav-border-color: rgba(white,.2)
+
+#body
+  margin-top: 24px
+  min-width: 320px
+
+  .row
+    display: table
+    border-collapse: collapse
+    table-layout: fixed
+    width: 100%
+
+.aside
+  display: table-cell
+  vertical-align: top
+  width: 360px
+
+  a.aside__head
+    display: block
+    padding-left: 24px
+    line-height: 65px
+    font-weight: 300
+    font-size: 18px
+    height: 65px
+    background-color: $black
+    color: white
+
+    i
+      background: url(../images/dist/menuNav.png) 50% 50% no-repeat transparent
+      vertical-align: middle
+      display: inline-block
+      float: right
+      width: 27px
+      height: 65px
+      margin-right: 24px
+      position: relative
+
+      &:after
+        position: absolute
+        content: ''
+        width: 6px
+        height: 6px
+        background-color: $red
+        right: 0
+        top: 50%
+        margin-top: -12px
+        border-radius: 50%
+
+  &__item
+    border-right: 1px solid $border
+    border-left: 1px solid $border
+    border-top: 1px solid $border
+    background-color: white
+    padding: 12px 0 12px 0
+    list-style: none
+    margin: 0
+    position: relative
+
+  &__drop
+    position: absolute
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4)
+    //min-height: 400px
+    max-width: 245px
+    left: 100%
+    height: 100%
+    width: 100%
+    top: 1px
+    display: none
+    list-style: none
+    margin: 0
+    padding: 20px 0
+    background-color: white
+
+    li a:hover
+      color: $red
+
+  &__footer
+    border: 1px solid $border
+    background-color: white
+    list-style: none
+    padding: 12px 0 12px 0
+    margin-top: 0
+    margin-bottom: 0
+
+.aside__item li a, .aside__footer li a
+  color: black
+  transition: all 0.2s ease-in-out
+  box-sizing: border-box
+  text-decoration: none
+  padding: 8px 24px
+  position: relative
+  line-height: 18px
+  font-size: 14px
+  display: block
+
+.aside__item>li:hover, .aside__footer>li:hover
+  background-color: $search-bg
+
+.jsChild>a:before
+  position: absolute
+  font-family: 'fontello'
+  content: "\f105"
+  right: 24px
+
+
+
+
+
+
+
+
+
+

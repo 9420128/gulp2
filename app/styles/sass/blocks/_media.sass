@@ -1,31 +1,65 @@
+@media (max-width: 1432px)
+  .header-tools__cart-text, .hidden-xl
+    display: none
+
+  .header__column:last-child
+    width: 180px
+
 @media (max-width: 1340px)
-  .om-header__column
+  .header__column
     &:first-child
       width: 220px
 
     &:nth-child(3)
-      width: 410px
+      width: 200px
 
     &:last-child
       width: 182px
 
-@media (max-width: 1240px)
-  .om-navbar__right
+  .header-phone__1
+    margin-right: 24px
+
+  .header-phone__column .icon-fax, .header-phone__2
+    display: none
+
+  .aside
+    width: 280px
+
+@media (max-width: 1240px) // -----  1240 px  -----
+  .navbar__right
     width: 340px
 
-  .om-header__column
+  .header__column
     &:nth-child(3)
       width: 200px
 
-@media (max-width: 1150px)
-  .om-navbar__right
+  .header-phone__1
+    margin-right: 0
+
+@media (max-width: 1150px) // -----  1150 px  -----
+  .navbar__right
     width: 380px
 
-@media (max-width: 1000px)
-  .om-navbar__right
+@media (max-width: 1024px) // -----  1024 px  -----
+  .aside, #main
+    width: 100%
+    display: block
+
+  #main
+    padding-left: 0px
+    margin-top: 24px
+
+  .aside__nav, .jsChild>a:before, .hidden-l
+    display: none
+
+  ul.aside__drop
+    display: none!important
+
+@media (max-width: 1000px) // -----  1000 px  -----
+  .navbar__right
     width: 330px
 
-  .om-header
+  .header
     height: 164px
 
   #headerSearch
@@ -36,14 +70,14 @@
     top: 90px
     left: 0
 
-@media (max-width: 700px)
-  .om-navbar__right
-    width: 270px
+@media (max-width: 700px) // -----  700 px  -----
+  .navbar__right
+    width: 300px
 
-  .om-container
+  .container
     padding: 0
 
-  .om-header__column
+  .header__column
     &:first-child
       width: 180px
 
@@ -51,47 +85,90 @@
       width: 190px
 
     &:last-child
-      width: 120px
+      width: 140px
 
   #logo
     padding: 0 12px
 
-@media (max-width: 600px)
-  .om-header__column
-    &:first-child
-      width: auto
+  .header-phone
+    margin-right: 12px
 
-    &:last-child
-      width: 60px
+  .header-phone__column
+    text-align: right
 
-  &:nth-child(2)
-    display: inline
+  .geo-link
+    margin-right: 20px
 
-  #logo
-    font-size: 20px
+  a.header-tools__compare
+    display: none
 
-@media (max-width: 640px)
-  .om-navbar__geo
+  .header-tools
+    position: relative
+    left: -25px
+
+  #aside, #main
+    box-sizing: border-box
+    padding: 0 12px
+
+
+@media (max-width: 640px) // -----  640 px  -----
+  .navbar__geo
     position: absolute
     left: 62px
 
   .removedItemsList
     left: 0px
 
-@media (max-width: 420px)
-  .om-navbar__geo
-    right: 12px
-    z-index: 1
-    top: 74px
+@media (max-width: 600px) // -----  600 px  -----
+  .header__column
+    &:first-child
+      width: auto
+
+    &:last-child
+      width: 60px
+
+  a.header-tools__wishlist
+    display: none
+
+@media (max-width: 420px) // -----  420 px  -----
+  .navbar__geo
+    //right: 12px
+    //z-index: 1
+    //top: 74px
+    display: none
 
     a
       color: black
 
-    .om-header__column:last-child
-      width: 0
+  .header__column:last-child
+    width: 0
 
-.om-header-search__input
-  padding-left: 12px
+  .header-search__icon
+    display: none
+
+  .header-search__input
+    padding-left: 12px
+    font-size: 14px
+
+  #headerSearch
+    padding-right: 75px
+
+  .header__column:nth-child(3)
+    width: 170px
+
+  .header-phone__heading
+    font-size: 1.2em
+
+  .header-phone__callback
+    font-size: 1em
+
+  a.header-tools__cart
+    position: absolute
+    right: 0px
+    top: 50px
+
+
+
 
 
 

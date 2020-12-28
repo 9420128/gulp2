@@ -1,8 +1,8 @@
-<div class="om-navbar">
-    <div class="om-container">
-        <div class="om-navbar__wrap">
-            <div class="om-navbar__left">
-                <ul class="om-navbar__list" id="subMenu" style="visibility: visible; opacity: 1;">
+<div class="navbar">
+    <div class="container">
+        <div class="navbar__wrap">
+            <div class="navbar__left">
+                <ul class="navbar__list" id="subMenu" style="visibility: visible; opacity: 1;">
                     <li><a href="">Главная</a></li>
                     <li><a href="">item -2</a></li>
                     <li><a href="">item -3</a></li>
@@ -14,14 +14,14 @@
                     <li ><a href="/callback/">Обратная связь</a></li>
                 </ul>
             </div>
-            <div class="om-navbar__right">
+            <div class="navbar__right">
                 <div class="inline-block">
-                    <ul class="om-navbar__list">
+                    <ul class="navbar__list">
                         <li><a href="">Вход</a></li>
                         <li><a href="">Регистрация</a></li>
                     </ul>
                 </div>
-                <div class="om-navbar__geo inline-block">
+                <div class="navbar__geo inline-block">
                     <a href="" class="geo-link">Санкт-Петербург</a>
                 </div>
             </div>
@@ -30,11 +30,11 @@
 </div>
 
 <!-- header -->
-<div class="om-header">
-    <div class="om-container">
-        <div class="om-header__wrap">
-            <div class="om-header__row">
-                <div class="om-header__column">
+<div class="header">
+    <div class="container">
+        <div class="header__wrap">
+            <div class="header__row">
+                <div class="header__column">
                     <div id="logo">
                         <a href="/">
                             <span>Okna Mag</span>
@@ -42,27 +42,72 @@
                         </a>
                     </div>
                 </div>
-                <div class="om-header__column">
+                <div class="header__column">
                     <div id="headerSearch">
                         <form action="/search/" id="headerSearchForm">
-                            <div class="om-header-search">
-                                <div class="om-header-search__wrap">
-                                    <div class="om-header-search__column">
+                            <div class="header-search">
+                                <div class="header-search__wrap">
+                                    <div class="header-search__column">
                                         <div class="flex">
-                                            <i class="om-header-search__icon icon-search"></i>
-                                            <input type="text" name="q" class="om-header-search__input" value="" autocomplete="off" placeholder="Поиск по каталогу магазина" id="searchQuery">
+                                            <i class="header-search__icon icon-search"></i>
+                                            <input type="text" name="q" class="header-search__input" value="" autocomplete="off" placeholder="Поиск по каталогу магазина" id="searchQuery">
                                         </div>
                                     </div>
-                                    <div class="om-header-search__column"></div>
-
+                                    <div class="header-search__column">
+                                        <div class="flex-center header-search__go">
+                                            <button type="submit" class="icon-right" value="" id="goSearch"></button>
+<!--                                            <input type="hidden" name="r" value="Y">-->
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="om-header__column"></div>
-                <div class="om-header__column"></div>
+                <div class="header__column">
+                    <div class="header-phone">
+                        <div class="header-phone__1">
+                            <div class="header-phone__column">
+                                <a href="" class="header-phone__icon icon-fax"></a>
+                            </div>
+                            <div class="header-phone__column">
+                                <span class="header-phone__heading">+7 (900) 622-56-66</span>
+                                <a href="#" class="header-phone__callback position-relative">Заказать звонок</a>
+                            </div>
+                        </div>
+                        <div class="header-phone__2">
+                            <div class="header-phone__column">
+                                <a href="" class="header-phone__icon icon-whatsapp"></a>
+                            </div>
+                            <div class="header-phone__column">
+                                <span class="header-phone__heading">+7 (905) 208-80-78</span>
+                                <div class="header-phone__desc">с 9:00 до 18:00 ежедневно</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__column">
+                    <div class="header-tools">
+                        <a class="header-tools__compare f-left">
+                            <span class="icon-align-right"></span>
+                            <span class="value">0</span>
+                        </a>
+                        <a class="header-tools__wishlist f-left">
+                            <span class="icon-heart"></span>
+                            <span class="value">0</span>
+                        </a>
+                        <a class="header-tools__cart f-left active">
+                            <span class="icon-basket-1"></span>
+                            <span class="value">10</span>
+                        </a>
+                        <div class="header-tools__cart-text active f-left">
+                            <a href="">
+                                <span class="header-tools__cart-label">В корзине</span>
+                                <span class="total">222 036.23 руб.</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

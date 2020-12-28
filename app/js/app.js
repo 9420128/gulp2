@@ -4,6 +4,7 @@ import $ from 'jquery'; window.jQuery = $; window.$ = $ // import module example
 // UIkit.use(Icons)
 
 require('./jsFiles/header.js')
+require('./jsFiles/aside-drop.js')
 
 
 

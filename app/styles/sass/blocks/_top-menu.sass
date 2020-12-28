@@ -2,9 +2,11 @@ $black: #1b1d1f //
 $red: #e81f00
 $search-bg: #fafafa // Фон поиска
 $search-solid: #f3f3f3 // бордер поиска
+$nav-icon-color: #e4e4e4
+//$nav-icon-color: #e4e4e4
 $nav-border-color: rgba(white,.2)
 
-.om-navbar
+.navbar
   color: #fff
   position: relative
   font-weight: 100
@@ -61,19 +63,18 @@ $nav-border-color: rgba(white,.2)
       li:first-child
         margin-right: 12px
 
-.om-navbar a
+.navbar a
   color: white
   transition: all 0.2s ease-in-out
-  text-decoration: none
 
   &:hover
     opacity: .8
 
-.om-navbar__right a
+.navbar__right a
   position: relative
   white-space: nowrap
 
-.om-navbar__right a:after
+.navbar__right a:after, .header-phone__callback:after
   border-bottom: 1px dashed #fff
   transition: all 0.2s ease-in-out
   position: absolute
@@ -121,13 +122,14 @@ $nav-border-color: rgba(white,.2)
 
 // header header header header
 
-.om-header
+.header
   border-bottom: 1px solid #f3f3f3
   background-color: #ffffff
   //line-height: 90px
   position: relative
   min-width: 320px
   height: 90px
+  font-size: 12px
 
   &__wrap
     display: table
@@ -137,7 +139,7 @@ $nav-border-color: rgba(white,.2)
   &__row
     display: table-row
 
-.om-header__column, .om-header-search__column
+.header__column, .header-search__column, .header-phone, .header-phone__column
   display: table-cell
   vertical-align: middle
 
@@ -167,11 +169,11 @@ $nav-border-color: rgba(white,.2)
     color: $red
 
   .icon-basket
-    font-size: 1.4em
+    font-size: 1.42em
     margin-left: -4px
 
 // Поиск
-.om-header__column
+.header__column
   &:first-child
     width: 230px
 
@@ -180,13 +182,13 @@ $nav-border-color: rgba(white,.2)
     //padding-left: 100px
 
   &:nth-child(3)
-    width: 410px
+    width: 485px
 
   &:last-child
     text-align: right
-    width: 182px
+    width: 400px
 
-.om-header-search
+.header-search
   border-radius: 50px
   background-color: $search-bg
   border: 1px solid $search-solid
@@ -201,18 +203,131 @@ $nav-border-color: rgba(white,.2)
     height: 50px
     width: 100%
 
+  &__column:last-child
+    width: 46px
+
   &__icon
-    font-size: 1.2em
+    font-size: 1.42em
     color: rgba(0, 0, 0, 0.3)
     padding-left: 12px
 
-.om-header-search__input
+  &__go
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    border: 1px solid $nav-icon-color
+    background-color: white
+    text-align: right
+
+    button
+      font-size: 1.2em
+      color: $nav-icon-color
+
+
+.header-search__input
   box-sizing: border-box
   height: 50px
   width: 100%
   border: 0
-  background-color: $search-bg
+  background-color: transparent
   text-overflow: ellipsis
   transition: all 0.2s ease-in-out
   color: #999
+
+.header-phone
+  margin-right: 24px
+
+.header-phone__1
+  margin-right: 48px
+
+.header-phone__1, .header-phone__2
+  vertical-align: middle
+  display: inline-block
+  line-height: 21px
+  text-align: left
+  letter-spacing: .05em
+
+.header-phone
+  &__column
+    color: $nav-icon-color
+
+    &:first-child
+      padding-right: 12px
+
+  &__icon
+    color: $nav-icon-color
+    font-size: 26px
+
+  &__heading
+    color: $black
+    display: block
+    font-weight: bold
+    font-size: 1.42em
+
+  &__callback
+    display: inline-block
+    font-weight: normal
+    color: black
+
+    &:after
+      border-color: black
+
+  &__desc
+    color: #888888
+
+.header-phone__icon.icon-whatsapp
+  font-size: 31px
+
+.header-tools
+  display: inline-block
+  vertical-align: middle
+  text-align: right
+
+  &__compare
+
+    .icon-align-right:before
+      transform: rotate(90deg)
+
+  a
+    position: relative
+    display: block
+    font-size: 26px
+    color: $black
+    width: 60px
+
+    .value
+      border: 2px solid #d1d1d1
+      background-color: #ffffff
+      border-radius: 50%
+      position: absolute
+      text-align: center
+      overflow: hidden
+      font-size: 12px
+      color: #d1d1d1
+      height: 20px
+      width: 20px
+      right: -6px
+      top: 0
+
+.header-tools__cart.active .value
+  border: 2px solid $red
+  color: $red
+
+.header-tools__cart-text
+  padding-left: 20px
+
+  a
+    width: 100%
+    font-size: inherit
+    margin-top: 8px
+
+.header-tools__cart-label
+  font-weight: bold
+
+.total
+  font-size: 1.42em
+
+.header-tools__cart-text.active .total
+  color: $red
+
 
