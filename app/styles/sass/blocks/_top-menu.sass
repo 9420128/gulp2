@@ -3,6 +3,7 @@ $red: #e81f00
 $search-bg: #fafafa // Фон поиска
 $search-solid: #f3f3f3 // бордер поиска
 $nav-icon-color: #e4e4e4
+$black-drop: #2b2b2b // Выподающий список
 //$nav-icon-color: #e4e4e4
 $nav-border-color: rgba(white,.2)
 
@@ -15,12 +16,6 @@ $nav-border-color: rgba(white,.2)
   border-bottom: 1px solid black
   background: $black
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06)
-
-  &__wrap
-    border-collapse: collapse
-    table-layout: fixed
-    display: table
-    width: 100%
 
   &__list
     display: inline-block
@@ -98,7 +93,7 @@ $nav-border-color: rgba(white,.2)
 
 // выпадающий список
 .removedItemsList
-  background-color: black
+  background-color: $black-drop
   position: absolute
   display: none
   width: 180px
@@ -131,15 +126,10 @@ $nav-border-color: rgba(white,.2)
   height: 90px
   font-size: 12px
 
-  &__wrap
-    display: table
-    table-layout: fixed
-    width: 100%
-
   &__row
     display: table-row
 
-.header__column, .header-search__column, .header-phone, .header-phone__column
+.header__column, .header-search__column, .header-phone, .header-phone__column, .table-cell
   display: table-cell
   vertical-align: middle
 
