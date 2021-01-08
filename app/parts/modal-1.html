@@ -1,0 +1,66 @@
+<div class="modal" id="modalPhone">
+    <div class="modal__wrap">
+        <div class="block__head bg-black-drop">Заказать звонок</div>
+        <button class="modal-close js-close" type="button"></button>
+        <form class="p-l">
+            <small>
+                Оставьте Ваше сообщение и контактные данные и наши специалисты
+                свяжутся с Вами в ближайшее рабочее время для решения Вашего
+                вопроса.
+            </small>
+            <br />
+            <label for="phone">
+                Ваш телефон <span style="color: red">*</span></label
+            >
+            <div class="form-controls">
+                <input
+                    class="input"
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    size="40"
+                />
+            </div>
+
+            <label for="userName">Ваше имя</label>
+            <div class="form-controls">
+                <input
+                    class="input"
+                    id="userName"
+                    name="userName"
+                    type="text"
+                    size="40"
+                />
+            </div>
+
+            <label data-for="personalInfoField">
+                <input
+                    type="checkbox"
+                    class="checkbox"
+                    name="personalInfo"
+                    value="Y"
+                />
+                &nbsp; Я согласен на
+                <a href="">обработку персональных данных.</a
+                ><span style="color: red">*</span>
+            </label>
+
+            <br />
+
+            <div class="grid m-t">
+                <div class="width-50">
+                    <input
+                        type="submit"
+                        name="web_form_submit"
+                        value="Отправить"
+                        class="input btn"
+                    />
+                </div>
+
+                <div class="width-100">
+                    <input type="reset" value="Сбросить" class="input btn" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

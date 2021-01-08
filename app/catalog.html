@@ -1,0 +1,118 @@
+<!--#set var="title" value="OptimizedHTML 56" -->
+<!--#include virtual="/parts/head.html" -->
+<!--#include virtual="/parts/header.html" -->
+<div class="body">
+    <div class="container">
+        <div class="body__row grid">
+            <aside class="aside" id="aside">
+                <a href="/catalog" class="aside__head" id="asideHead"
+                    >Каталог товаров <i></i
+                ></a>
+                <div class="aside__nav" style="display: none">
+                    <!--#include virtual="/parts/aside-menu.html" -->
+                </div>
+                <!--#include virtual="/parts/aside-razdel.html" -->
+                <!--#include virtual="/parts/aside-filter.html" -->
+            </aside>
+            <main class="width-100 main">
+                <div class="breadcrumb">
+                    <ul>
+                        <li>
+                            <a href="/">Главная страница</a>
+                        </li>
+                        <li>
+                            <a href="/">Москитные сетки</a>
+                        </li>
+                        <li><span>Каталог товаров</span></li>
+                    </ul>
+                </div>
+                <h1>Каталог товаров</h1>
+
+                <div class="catalogLine block block__between">
+                    <div class="flex catalogLine__row">
+                        <div class="item grid item-beetwen">
+                            <div class="vis-1240">
+                                <a href="#" class="btn btn-black btn-small">
+                                    <span class="icon-basket"></span>
+                                    <span class="hide-600">Фильтр</span>
+                                </a>
+                            </div>
+
+                            <span class="hide-640">Сортировать по:</span>
+                            <div>
+                                <select
+                                    class="select select-small"
+                                    name="sortFields"
+                                    id="selectSortParams"
+                                >
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_FIELD=ID"
+                                    >
+                                        популярности
+                                    </option>
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_FIELD=NAME"
+                                    >
+                                        алфавиту
+                                    </option>
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_FIELD=PRICE_ASC"
+                                    >
+                                        увеличению цены
+                                    </option>
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_FIELD=PRICE_DESC"
+                                    >
+                                        уменьшению цены
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item grid hide-1240">
+                            <span>Показать по:</span>
+                            <div>
+                                <select
+                                    class="select select-small"
+                                    name="countElements"
+                                    id="selectCountElements"
+                                >
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_TO=30"
+                                    >
+                                        30
+                                    </option>
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_TO=60"
+                                    >
+                                        60
+                                    </option>
+                                    <option
+                                        value="/catalog/bytovaya_ventilyatsiya/?SORT_TO=90"
+                                    >
+                                        90
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex hide-420">
+                        <div class="item grid">
+                            <span class="hide-1240">Вид каталога:</span>
+                            <a
+                                href=""
+                                class="catalogLine__icon icon-th active"
+                            ></a>
+                            <a
+                                href=""
+                                class="catalogLine__icon icon-th-list"
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<!--#include virtual="/parts/modal-1.html" -->
+<!--#include virtual="/parts/footer.html" -->

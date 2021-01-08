@@ -1,0 +1,110 @@
+<div class="razdel block" id="smartFilter">
+    <div class="block__head accordion">Фильтер по пораметрам</div>
+    <div class="list-divider">
+        <div>
+            <div class="block__label accordion">Розничная цена</div>
+            <div class="flex block__filter" id="sl_1">
+                <label>От</label>
+                <div>
+                    <input
+                        class="input input-small"
+                        name="arrFilter_P1_MIN"
+                        width="40"
+                        type="text"
+                        value="1590"
+                        id="arrFilter_P1_MIN"
+                        onchange="smartFilter.keyup(this)"
+                        data-default="1590"
+                        data-val="1590"
+                    />
+                </div>
+                <label>До</label>
+                <div>
+                    <input
+                        class="input input-small"
+                        name="arrFilter_P1_MAX"
+                        type="text"
+                        value="45990"
+                        id="arrFilter_P1_MAX"
+                        onchange="smartFilter.keyup(this)"
+                        data-default="45990"
+                        data-val="45990"
+                    />
+                </div>
+                <div class="range">
+                    <div class="range__line">
+                        <div class="range__left">
+                            <ins id="s_arrFilter_P1_MIN" class="left"></ins>
+                        </div>
+
+                        <div class="range__right" style="width: 0px">
+                            <ins id="s_arrFilter_P1_MAX" class="right"></ins>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="block__label accordion">Производитель</div>
+            <div class="flex block__filter" id="sl_1">
+                <input
+                    class="checkbox"
+                    type="checkbox"
+                    value="Y"
+                    name="arrFilter_124_3221249481"
+                    id="arrFilter_124_3221249481"
+                    onclick="smartFilter.click(this)"
+                />
+                <label
+                    for="arrFilter_124_3221249481"
+                    data-role="label_arrFilter_124_3221249481"
+                    >Veka</label
+                >
+            </div>
+        </div>
+        <div>
+            <div class="grid-small p-24-12">
+                <div class="width-50">
+                    <button class="btn btn-black width-100">Показать</button>
+                </div>
+
+                <div class="width-100">
+                    <button id="del_filter" class="btn btn-def width-100">
+                        Сбросить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#sl_1').rangeSlider({
+            min: 918,
+            max: 50604,
+            step: 1,
+            leftButton: '#s_arrFilter_P1_MIN',
+            rightButton: '#s_arrFilter_P1_MAX',
+            inputLeft: '#arrFilter_P1_MIN',
+            inputRight: '#arrFilter_P1_MAX',
+        })
+    })
+</script>
+
+<script>
+    // https://profcomfort.com/bitrix/cache/js/s1/dresscode/page_06af9b47de25fa9ad667eaf3c63c7af0/page_06af9b47de25fa9ad667eaf3c63c7af0_v1.js?160914457927769
+    var smartFilter = new JCSmartFilter(
+        '/catalog/bytovaya_ventilyatsiya/bytovaya_pritochnaya_ventilyatsiya/',
+        'VERTICAL',
+        {
+            SEF_SET_FILTER_URL:
+                '/catalog/bytovaya_ventilyatsiya/bytovaya_pritochnaya_ventilyatsiya/filter/clear/apply/',
+            SEF_DEL_FILTER_URL:
+                '/catalog/bytovaya_ventilyatsiya/bytovaya_pritochnaya_ventilyatsiya/filter/clear/apply/',
+        }
+    )
+    var SMART_FILTER_LANG = {
+        HIDE_ALL: 'Скрыть',
+        SHOW_ALL: 'Показать ещё',
+    }
+</script>

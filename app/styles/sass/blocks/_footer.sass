@@ -1,20 +1,85 @@
-$black-drop: #2b2b2b // Выподающий список
-$black: #1b1d1f //
+@import _base
 
 .footer
   margin-bottom: 55px
-  padding-top: 24px
-  overflow: hidden
+  padding-top: $grid
+  color:  $footer-color
+  min-width: 320px
 
   &__left
-    width: 60%
     background-color: $black-drop
+    padding: $grid $grid 0 $grid
+
+    >div
+      padding-right: 48px
+      
+      &:last-child
+        padding-right: 0
 
   &__right
-    width: 40%
     background-color: $black
+    padding: $grid
 
-.footer__left, .footer__right
-  box-sizing: border-box
-  padding: 24px 0 24px 24px
-  vertical-align: top
+  &__head
+    padding-bottom: 6px
+    margin-bottom: 6px
+    font-size: 20px
+    display: block
+    border-bottom: 1px solid #3e3e3e;
+
+  &__list li
+    border-top: 1px solid $footer-border
+
+    &:first-child
+      border: none
+
+    &:last-child
+      padding-bottom: 18px
+    
+    a
+      transition: 0.2s all ease-in-out
+      font-size: 13px
+      padding: 6px 0
+      display: block
+      color: $link-muted
+
+  .logo 
+    display: block
+    height: auto
+    
+    span
+      color: $footer-color
+  
+  p
+    font-size: 14px
+    color: #888888
+    margin-top: 12px
+
+  &__adres
+    padding-left: $grid
+    box-sizing: border-box
+
+.footer__adres .footer__head
+  font-size: 1rem
+  
+
+.footerLine
+  position: fixed
+  z-index: 999
+  bottom: 0
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.25);
+  border-color: #f3f3f3
+
+  .mark
+    background-color: #f6f6f6
+    color: #666666
+    border-radius: 4px
+    margin-left: 12px
+    line-height: 20px
+    overflow: hidden
+    padding: 2px 12px
+    height: 20px
+  
+.footerLine .item a
+  line-height: 55px
+  color: #888

@@ -1,3 +1,15 @@
+// box-sizing: border-box
+// flex: 0 0 240px Запрет увеличиваться, запрет уменьшаться, размер
+// flex: 1 1 auto все разрешено
+// flex-wrap: wrap
+
+@import '_base'
+
+// breadcrumb
+
+// 1. display table, flex, grid
+// 2. child - используются вместе с grid, делят колонки на равные части
+
 .container
   padding: 0 24px
   max-width: 1920px
@@ -17,8 +29,12 @@
 .position-relative, .navbarItemsContainer
   position: relative
 
-.flex, .flex-between, .flex-center
+.flex, .flex-between, .flex-center, .grid, .grid-small
   display: flex
+  flex-wrap: wrap
+
+.flex.nowrap
+  flex-wrap: nowrap
 
 .flex-center
   justify-content: center
@@ -32,44 +48,196 @@
   visibility: hidden
   opacity: 0
 
-button
-  margin: 0
+.grid, .grid-small
+  flex-wrap: wrap
   padding: 0
-  background-color: inherit
-  border: none
-  cursor: pointer
-  display: inline-block
+  list-style: none
+
+.grid
+  margin-left: $grid-wrap
+  >*
+    padding-left: $grid
+
+.grid-small
+  margin-left: $grid-small-wrap
+  >*
+    padding-left: $grid-small
+
+
+// 2. child
+// @media 420 - xs child-xs-1
+// @media 640 - s child-s-1
+// @media 960 - m
+// @media 1024 - l
+// @media 1432 - xl
+
+[class*='child']>*
+  box-sizing: border-box
+
+.child-2>*
+  width: 50%
+
+.child-3>*
+  width: 33.33%
+
+.child-4>*
+  width: 25%
 
 .f-left
   float: left
 
-[class*='w']
+[class*='width']
   box-sizing: border-box
   width: 100%
   max-width: 100%
 
-.w-40
+.width-30
+  width: 33.33%
+
+.width-40
   width: 40%
 
-.w-100
+.width-50
+  width: 50%
+
+.width-100
   flex: 1
   min-width: 1px
 
-.w-auto
+.width-auto
   width: auto
 // padding
 .p-m
   padding: 18px
 
+.p-l
+  padding: 24px
+
+.p-24-12
+  padding: $grid 12px
+
 // margin
 .m-l-xs
   margin-left: 8px
+
+.m-t
+  margin-top: 24px
 
 // color
 .c-m
   color: #888
 
 .bg-m
-  background-color: #f3f3f3
+  background-color: $search-solid
+
+p.hr
+  border-top: 1px solid #575757
+  padding-top: .9em
+
+// text
+.text-t-u
+  text-transform: uppercase
+
+.fz-1
+  font-size: 1rem
+
+.bg-black-drop
+  background-color: $black-drop
+  color: $white
+
+
+
+
+.js-close
+  background-color: transparent
+  transition: .1s ease-in-out
+  transition-property: color,opacity
+  color: inherit
+  display: inline-block
+  fill: currentcolor
+  line-height: 0
+  text-transform: none
+  padding: 0
+  margin: 0;
+  border: none
+  border-radius: 0
+  overflow: visible
+  font: inherit
+
+.js-close:hover, .js-close:focus
+  color: $color-input
+  outline: none
+
+svg:not(:root)
+  overflow: hidden
+
+svg
+  max-width: 100%
+  height: auto
+  box-sizing: border-box
+
+.js-close:not(.preserve) [stroke*='#']:not(.preserve)
+  stroke: currentcolor
+
+.breadcrumb
+  margin-bottom: 12px
+  overflow: hidden
+  line-height: 22px
+
+  ul>*
+    display: contents
+
+    >*
+      font-size: 12px
+      color: black
+
+  a:hover
+    color: $link-muted
+
+.breadcrumb ul>:nth-child(n+2):not(.irst-column)::before
+    font-family: arial
+    content: "•"
+    display: inline-block
+    margin: 0 12px
+    font-size: 18px
+    color: #888
+    vertical-align: middle
+
+.breadcrumb ul>:last-child>span, .breadcrumb ul>:last-child>a:not([href])
+    color: $link-muted
+
+h1
+  line-height: 36px
+  margin: 0 0 24px
+  font-size: 24px
+  color: #000000
+  display: block
+  font-weight: 300
+
+a.h2
+  text-decoration: none
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 24px
+  font-size: 20px
+  color: $black
+  display: block
+
+a.link-border
+  border-bottom: 1px solid $border-input
+  color: $black
+  text-decoration: none
+  padding-bottom: 12px
+  margin-bottom: 12px
+  font-size: 14px
+  display: block
+
+// visible
+  // vis-1240 {display: block}
+[class*='vis']
+  display: none
+
+.list-divider>:nth-child(n+2)
+  border-top: 1px solid $border
 
 

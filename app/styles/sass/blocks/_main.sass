@@ -1,4 +1,23 @@
-#main
-  display: table-cell
-  vertical-align: top
+@import _base
+  
+.body
+  margin-top: 24px
+
+.main
   padding-left: 24px
+
+.catalogLine
+  // min-width: 320px
+
+  .item
+    align-items: center
+    flex-wrap: nowrap
+
+a.catalogLine__icon
+  text-decoration: none
+  font-size: 1.2rem
+  color: $link-muted
+
+a.catalogLine__icon:hover, a.catalogLine__icon.active
+  color: $black
+  

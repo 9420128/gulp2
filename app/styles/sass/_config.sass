@@ -37,16 +37,19 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 *
   box-sizing: content-box
-
+html, body
+  font-size: $fontsize
+  
 body
   font-family: $userfont
-  font-size: $fontsize
   line-height: $lineheight
   color: $textcolor
-  min-width: 320px
+  // min-width: 320px
   position: relative
   overflow-x: hidden
   z-index: 1
+  font-weight: 300
+  margin: 0
 
 // GENERAL DOCUMENT STYLES
 ::placeholder

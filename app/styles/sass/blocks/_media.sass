@@ -1,9 +1,27 @@
-@media (max-width: 1432px)
-  .header-tools__cart-text, .hidden-xl
+// 420 - xs
+// 640 - s
+// 960 - m
+// 1024 - l
+// 1432 - xl
+  
+@media (max-width: 1432px) // ----------------- " xl "
+  .header-tools__cart-text, .hide-xl
     display: none
 
   .header__column:last-child
     width: 180px
+
+  // .child-hl-1>*
+  //   width: 100%
+
+  // .child-hl-2>*
+  //   width: 50%
+
+  // .child-hl-3>*
+  //   width: 33.33%
+
+  // .child-hl-4>*
+  //   width: 25%
 
 @media (max-width: 1340px)
   .header__column
@@ -36,20 +54,33 @@
   .header-phone__1
     margin-right: 0
 
+  .footer__right
+    width: 23%
+  
+  .hide-1240
+    display: none
+
+  .vis-1240
+    display: block
+  
+  .footer__right .footer__adres
+    padding-left: 0
+
 @media (max-width: 1150px) // -----  1150 px  -----
   .navbar__right
     width: 380px
+  
+  .hide-1150
+    display: none
 
-@media (max-width: 1024px) // -----  1024 px  -----
-  .aside, #main
+@media (max-width: 1024px) // -----  1024 px " l " -----
+  .aside, .main
     width: 100%
-    display: block
 
-  #main
-    padding-left: 0px
+  .main
     margin-top: 24px
 
-  .aside__nav, .jsChild>a:before, .hidden-l
+  .aside__nav, .jsChild>a:before, .hide-l
     display: none
 
   ul.aside__drop
@@ -57,6 +88,29 @@
 
   ul.aside__footer
     margin-bottom: 0
+
+  .footer>div
+    width: 100%
+
+  .breadcrumb
+    position: relative
+    min-width: 100%
+    overflow-x: auto
+    height: 22px
+
+    ul
+      white-space: nowrap
+      overflow: auto
+
+  .child-l-2>*
+    width: 50%
+
+  .child-l-3>*
+    width: 33.33%
+
+  .child-l-4>*
+    width: 25%
+
 
 @media (max-width: 1000px) // -----  1000 px  -----
   .navbar__right
@@ -73,6 +127,25 @@
     top: 90px
     left: 0
 
+@media (max-width: 960px) // -----  960 px  " m " -----
+  .hide-960
+    display: none
+  
+  .footerLine
+    justify-content: center!important
+
+  .child-m-1>*
+    width: 100%
+
+  .child-m-2>*
+    width: 50%
+
+  .child-m-3>*
+    width: 33.33%
+
+  .child-m-4>*
+    width: 25%
+
 @media (max-width: 700px) // -----  700 px  -----
   .navbar__right
     width: 300px
@@ -83,6 +156,7 @@
   .header__column
     &:first-child
       width: 180px
+      padding-left: 16px
 
     &:nth-child(3)
       width: 190px
@@ -109,18 +183,42 @@
     position: relative
     left: -25px
 
-  #aside, #main
+  .aside, .main
     box-sizing: border-box
+    
+  .body .body__row
     padding: 0 12px
+  
+  .footer__left>div
+    width: 50%
+    padding-right:0!important
 
 
-@media (max-width: 640px) // -----  640 px  -----
+@media (max-width: 640px) // -----  640 px  " s " -----
   .navbar__geo
     position: absolute
     left: 62px
 
   .removedItemsList
     left: 0px
+
+  .hide-640
+    display: none
+  
+  .modal.open
+    padding: 15px
+
+  .child-s-1>*
+    width: 100%
+
+  .child-s-2>*
+    width: 50%
+
+  .child-s-3>*
+    width: 33.33%
+
+  .child-s-4>*
+    width: 25%
 
 @media (max-width: 600px) // -----  600 px  -----
   .header__column
@@ -130,10 +228,21 @@
     &:last-child
       width: 60px
 
-  a.header-tools__wishlist
+  a.header-tools__wishlist, .hide-600
     display: none
 
-@media (max-width: 420px) // -----  420 px  -----
+  .catalogLine.block
+    padding: 0
+
+  .catalogLine__row, .item-beetwen
+    width: 100%
+
+  .item.item-beetwen
+    justify-content: space-between
+    margin-left: 0
+    // float: right
+
+@media (max-width: 420px) // -----  420 px " xs " -----
   .navbar__geo
     //right: 12px
     //z-index: 1
@@ -146,7 +255,7 @@
   .header__column:last-child
     width: 0
 
-  .header-search__icon
+  .header-search__icon, .hide-420
     display: none
 
   .header-search__input
@@ -169,6 +278,23 @@
     position: absolute
     right: 0px
     top: 50px
+
+  .footer__left>div
+    width: 100%
+
+  .child-xs-1>*
+    width: 100%
+
+  .child-xs-2>*
+    width: 50%
+
+  .child-xs-3>*
+    width: 33.33%
+
+  .child-xs-4>*
+    width: 25%
+
+
 
 
 

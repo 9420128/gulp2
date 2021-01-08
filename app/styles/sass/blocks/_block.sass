@@ -1,34 +1,86 @@
-$border: #eeeeee // бордер
-$bg-m: #f9f9f9
+@import '_base'
 //
 .block
   background-color: white
   border: 1px solid $border
   font-size: 12px
-  margin-bottom: 24px
+  // margin-bottom: 24px
+  
+  p
+    margin-top: 6px
 
-  a
-    color: black
-    text-decoration: underline
-    transition: all 0.2s ease
-    display: block
+  &__between
+    display: flex
+    justify-content: space-between
+    height: 55px
+    padding: 0 $grid
+    background-color: white
+    box-sizing: border-box
+    font-size: 14px
+    width: 100%
 
-    &:hover
-      color: red
+    .item
+      margin-right: $grid
+
+      &:last-child
+        margin-right: 0
+
+  &__section
+    border-top: 1px solid $border
+    padding: 24px
+
+    &:first-child
+      border: none
+
 
   &__footer
     background-color: $bg-m
     border-top: 1px solid $border
 
+.aside__nav .block a
+  color: black
+
 // Заголовок
-a.block__head
-  font-size: 1.33em
+a.block__head, div.block__head
+  font-size: 1.125rem
   height: 55px
   line-height: 55px
-  padding: 0 24px
+  padding: 0 $grid
   border-bottom: 1px solid $border
   text-decoration: none
 
-  &:hover
-    color: inherit
+a.block__head:hover
+  color: inherit
+
+.razdel .block__head
+  background: $search-solid
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+
+.block__label
+  padding: 12px $grid
+  font-size: 14px
+
+.block__filter
+  padding: 0 $grid $grid
+  align-items: center
+
+  >*
+    margin-right: 12px
+
+.accordion
+  cursor: pointer
+  position: relative
+
+  &:after
+    position: absolute
+    right: 24px
+    top: 2px
+    font-family: 'fontello'
+    content: "\f106"
+    font-size: 1.2em
+
+.accordion.close:after
+  content: "\f107"
 

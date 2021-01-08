@@ -1,0 +1,57 @@
+.modal
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 100
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  padding: 65px 30px
+  background: rgba(0,0,0,0.6)
+  opacity: 0
+  transition: opacity .15s linear
+
+.modal.open
+  opacity: 1
+  display: block  // delete
+
+.open>.modal__wrap
+  opacity: 1
+  transform: translateY(0)
+
+.modal__wrap
+  position: relative
+  box-sizing: border-box
+  margin: 0 auto
+  width: 600px
+  max-width: calc(100% - 0.01px) !important
+  background: #fff
+  opacity: 0
+  transform: translateY(-100px)
+  transition: .3s linear
+  transition-property: opacity,transform
+  display: flow-root
+
+  input
+      font-size: 14px
+      color: #555555
+  
+  label
+      display: inline-block
+      margin: 12px 0
+
+      font-size: 12px
+      font-weight: bold
+      color: $black-drop
+
+.modal-close
+  position: absolute
+  cursor: pointer
+  right: 24px
+  top: 16px
+  color: $white
+
+.modal-open // html class
+  overflow: hidden
