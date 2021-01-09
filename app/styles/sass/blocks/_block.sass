@@ -2,7 +2,7 @@
 //
 .block
   background-color: white
-  border: 1px solid $border
+  outline: 1px solid $border
   font-size: 12px
   // margin-bottom: 24px
   
@@ -42,6 +42,7 @@
 
 // Заголовок
 a.block__head, div.block__head
+  display: block
   font-size: 1.125rem
   height: 55px
   line-height: 55px
@@ -76,11 +77,24 @@ a.block__head:hover
   &:after
     position: absolute
     right: 24px
-    top: 2px
     font-family: 'fontello'
     content: "\f106"
     font-size: 1.2em
 
 .accordion.close:after
   content: "\f107"
+
+.modef
+  background: url(../images/dist/modef.png) 0 0 no-repeat
+  transition: top .2s ease
+  position: absolute
+  line-height: 38px
+  padding-left: 7px
+  text-align: center
+  font-size: 12px
+  width: 193px
+  height: 38px
+  left: 315px
+  color: #fff
+  z-index: 99
 
