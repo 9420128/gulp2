@@ -100,7 +100,8 @@ $(function () {
     sliceMenuOnline(false)
 })
 
-// modal
+// ------------------------------  modal -------------------------------- //
+
 const modalCloseBtn = `<svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="16" y2="16"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="16" y1="1" x2="1" y2="16"></line></svg>`
 
 $('.js-close').html(modalCloseBtn)
@@ -109,6 +110,8 @@ function modalOpen(e) {
     e.preventDefault()
 
     const dataId = $(this).data('modal')
+        ? $(this).data('modal')
+        : $(this).data('id')
 
     if ($('#' + dataId).length === 0) return false
 
@@ -127,6 +130,8 @@ function modalClose() {
 }
 
 $('.header-phone__callback').on('click', modalOpen)
+$('.product__label').on('click', modalOpen)
+$('.addCart').on('click', modalOpen)
 
 $('.modal').on('click', (e) => {
     let el = $('.modal.open>.modal__wrap')
@@ -138,3 +143,5 @@ $('.modal-close').on('click', (e) => {
     e.preventDefault()
     return modalClose()
 })
+
+$('.banner-animated').addClass('banner-image-load')

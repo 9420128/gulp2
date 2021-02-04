@@ -9,4 +9,5 @@
 require('./jsFiles/header.js')
 require('./jsFiles/aside-drop.js')
 require('./jsFiles/rangSlider.js')
-require('./jsFiles/filter.js')
+// require('./jsFiles/filter.js')
+require('./jsFiles/product.js')

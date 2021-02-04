@@ -1,3 +1,5 @@
+@import _base
+
 // 420 - xs
 // 640 - s
 // 960 - m
@@ -8,7 +10,25 @@
 @media (max-width: 1800px) // ----------------- " xxl
   .child-xxl-4>*
     width: 25%
+
+@media (max-width: 1700px) // ----------------- " 1700 "
+  .products .products__column-3
+    width: 280px
+
+@media (max-width: 1600px) // ----------------- " 1600 "
+  .aside, .products .products__column-1
+    width: 280px
   
+@media (max-width: 1520px) // ----------------- " 1520 "
+  .products .products__column-1
+    display: none
+
+  .products .products__column-3
+    width: 300px
+
+  .products .products__mobil
+    display: flex
+
 @media (max-width: 1432px) // ----------------- " xl "
   .header-tools__cart-text, .hide-xl
     display: none
@@ -71,7 +91,7 @@
   .footer__right
     width: 23%
   
-  .hide-1240
+  .hide-1240, .aside-info
     display: none
 
   .vis-1240
@@ -82,6 +102,9 @@
 
   .modef
     left: 345px
+
+  .child-ml-2>*
+    width: 50%
 
   .child-ml-3>*
     width: 33.33%
@@ -97,10 +120,13 @@
   .aside, .main
     width: 100%
 
-  .main
+  .aside
+    padding-bottom: 0
+
+  .main, .main-line
     margin-top: 24px
 
-  .aside__nav, .jsChild>a:before, .hide-l
+  .aside__nav, .jsChild>a:before, .hide-l, .product__img:hover .product__label
     display: none
 
   ul.aside__drop
@@ -154,6 +180,9 @@
     visibility: visible
     opacity: 1
 
+  .products .products__column-3
+    display: none
+
 @media (max-width: 1000px) // -----  1000 px  -----
   .navbar__right
     width: 330px
@@ -188,6 +217,9 @@
   .child-m-4>*
     width: 25%
 
+  .properties__table td.name
+    width: 70%
+
 @media (max-width: 700px) // -----  700 px  -----
   .navbar__right
     width: 300px
@@ -218,7 +250,7 @@
   .geo-link
     margin-right: 20px
 
-  a.header-tools__compare
+  a.header-tools__compare, .rating, .product__label, .product__info .product__add, .product__footer
     display: none
 
   .header-tools
@@ -228,12 +260,45 @@
   .aside, .main
     box-sizing: border-box
     
-  .body .body__row
-    padding: 0 12px
+  .body .body__row, .products__column-2 .container
+    padding: 0 $grid-small
   
   .footer__left>div
     width: 50%
     padding-right:0!important
+
+  .product
+    height: 140px
+
+    >.block
+      height: 100%
+
+    &__info
+      line-height: 30px
+      padding-left: $grid-small
+      width: 55%
+
+    &__body
+      display: flex
+
+    &__wrap
+      width: 45%
+
+    &__img
+      height: 120px
+      line-height: 120px
+
+    &__link
+
+    &__price
+      margin-bottom: 6px
+      font-size: 14px
+
+  a.product__btn
+    display: inline-block
+
+  .products__column-2 .browse__col-1, .products__column-2 .browse__col-2
+    width: 100%
 
 
 @media (max-width: 640px) // -----  640 px  " s " -----
@@ -335,6 +400,11 @@
 
   .child-xs-4>*
     width: 25%
+
+  .properties__table td:not(.name)
+    text-align: right
+    font-weight: bold
+    padding-right: $grid-small
 
 
 

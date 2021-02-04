@@ -179,6 +179,14 @@ input {
     overflow: visible;
 }
 
+button:active,
+button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -356,6 +364,15 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+ol > li {
+    margin-bottom: 0.5em;
 }
 
 .input,

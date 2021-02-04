@@ -45,13 +45,13 @@
     &:last-child
       margin-right: -12px
 
-.input, .select, .textarea, .radio, .checkbox, .btn
+.input, .select, .textarea, .radio, .checkbox, .btn, .btn-red, .addCart, .product__add
   box-sizing: border-box
   transition: .2s ease-in-out
 
 //  Кнопки
 
-.btn, .product__add
+.btn, .product__add, .addCart, .product__btn
   margin: 0
   border: none
   overflow: visible
@@ -61,7 +61,6 @@
   -webkit-appearance: none
   border-radius: .2em
   display: inline-block
-  box-sizing: border-box
   padding: 0 30px
   vertical-align: middle
   font-size: 14px
@@ -73,13 +72,16 @@
 .btn-line
   text-decoration: underline
   display: block
+  color: black
+  &:hover
+    color: $black-hover
 
-.btn-small
+.btn-small, .product__btn
   padding: 0 15px
   line-height: 30px
   font-size: 14px
 
-.btn-large, .product__add
+.btn-large, .product__add, .addCart
   font-size: 1rem
   line-height: 60px
 
@@ -90,16 +92,28 @@ input.btn[type="submit"], .btn-black
   background-color: $black
   color: $white
 
-.btn-def
+.btn-def, .product__btn
   border: 1px solid $border
-  background: transparent
+  background: white
   color: #222
+
+.btn-def:hover, .btn-def:focus
+  background: $bg-btn-def-hover
+  border-color: $bg-btn-def-hover
+
 
 .btn-grey, .product__add
   background: $border
   color: $black
 
-.product__add
+.btn-red, .addCart
+  background: $red
+  color: $white
+
+  &:hover
+    background: $black
+
+.product__add, .addCart
   width: 100%
   font-weight: normal
 
@@ -108,6 +122,7 @@ input.btn[type="submit"], .btn-black
     content: "\f291"
     margin-right: .4em
 
+.product__add
   &:hover
     background: $red
     color: white
@@ -194,3 +209,27 @@ button
 //   padding: 0
 //   cursor: pointer
 //   display: inline-block
+
+.addCartClick
+  background: white
+  color: #717171
+
+.addCartClick:hover
+  color: black
+
+a.product__btn
+  display: none
+
+a.link-grey
+  transition: all 0.2s ease-in-out
+  font-weight: 300
+  text-decoration: none
+  line-height: 21px
+  font-size: 15px
+  color: #717171
+
+  &:before
+    margin-right: .5em
+
+  &:hover
+    color: black

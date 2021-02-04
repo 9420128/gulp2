@@ -1,3 +1,5 @@
+@import _base
+
 .modal
   display: none
   position: fixed
@@ -22,6 +24,7 @@
   transform: translateY(0)
 
 .modal__wrap
+  box-shadow: 1px 1px 12px rgba(60, 60, 60, 0.3)
   position: relative
   box-sizing: border-box
   margin: 0 auto
@@ -35,16 +38,15 @@
   display: flow-root
 
   input
-      font-size: 14px
-      color: #555555
+    font-size: 14px
+    color: #555555
   
   label
-      display: inline-block
-      margin: 12px 0
-
-      font-size: 12px
-      font-weight: bold
-      color: $black-drop
+    display: inline-block
+    margin: 12px 0
+    font-size: 12px
+    font-weight: bold
+    color: $black-drop
 
 .modal-close
   position: absolute
@@ -55,3 +57,285 @@
 
 .modal-open // html class
   overflow: hidden
+
+  // --------------------------- modalProduct ----------------------------------- //
+.modalProduct
+  transition: 0.1s all ease-in-out
+
+  .modal__wrap
+    width: 1000px
+    animation-duration: 0.2s
+    animation-fill-mode: both
+    animation-name: zoomIn
+
+  &__imgColumn
+    border-right: 1px solid $border
+    position: relative
+    height: 490px
+
+@keyframes zoomIn
+  from
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+
+  50%
+    opacity: 1
+
+.appFastViewPictureSlider
+  transition: left 0.2s ease-in-out
+  position: relative
+  overflow: hidden
+
+.appFastViewPictureSliderItem
+  line-height: 380px
+  height: 380px
+
+.appFastViewPictureSliderItemLayout
+  vertical-align: middle
+  display: inline-block
+  line-height: 0
+
+.appFastViewPictureSliderItemLink
+  display: inline-block
+  position: relative
+  overflow: hidden
+  line-height: 0
+  height: auto
+
+  img
+    transition: all 0.2s ease-in-out
+
+.appFastViewPictureSliderItemPicture
+  vertical-align: middle
+  max-height: 100%
+  max-width: 100%
+
+
+
+.appFastViewPictureCarousel
+  box-sizing: border-box
+  padding: 0 $grid-small $grid-small $grid-small
+  margin: 0 $grid
+
+.appFastViewPictureCarousel, .appFastViewPictureCarouselItems
+  transition: left 0.2s ease-in-out
+  position: relative
+  overflow: hidden
+
+.appFastViewPictureCarouselItems
+  padding-bottom: 12px
+  left: 0
+
+.appFastViewPictureCarouselItem
+  line-height: 60px
+  height: 60px
+
+.appFastViewPictureSliderItem, .appFastViewPictureCarouselItem
+  text-align: center
+  float: left
+
+.appFastViewPictureCarouselItemLink
+  position: relative
+  display: block
+  height: 60px
+  opacity: 0.3
+
+.appFastViewPictureCarouselItemLink.active
+  pointer-events: none
+  position: relative
+  opacity: 1
+
+.appFastViewPictureCarouselItemPicture
+  vertical-align: middle
+  max-height: 100%
+  max-width: 100%
+
+.appFastViewPictureCarouselItemLink.active:after
+  background: rgba(0, 0, 0, 1)
+  transform: translateX(-50%)
+  position: absolute
+  display: block
+  bottom: -4px
+  content: ''
+  height: 2px
+  width: 20%
+  left: 50%
+
+.appFastViewPictureCarouselLeftButton
+  left: 0
+
+.appFastViewPictureCarouselLeftButton, .appFastViewPictureCarouselRightButton
+  background: url(../images/dist/carouselArrowSmall.png) 0 0 no-repeat transparent
+  position: absolute
+  margin-top: -14px
+  height: 16px
+  opacity: 0.5
+  z-index: 99
+  width: 14px
+  top: 50%
+
+.appFastViewPictureCarouselRightButton
+  background-position: -14px 0
+  right: 0
+
+.appFastViewDescriptionColumn
+  position: relative
+  overflow: hidden
+  height: auto
+  float: left
+
+
+.appFastViewDescriptionColumnContainer
+  box-sizing: border-box
+  padding-right: $grid
+  padding-top: $grid
+  overflow-x: hidden
+  position: absolute
+  overflow-y: scroll
+  height: 100%
+  width: 100%
+  left: $grid
+
+.appFastViewProductHeading
+  line-height: 33px
+  font-size: 21px
+
+.appFastViewProductHeading a
+  color: #000000
+
+  &:hover
+    color: #555555
+
+.appFastViewInformationColumn
+  box-sizing: border-box
+  background-color: $search-solid
+  padding: 6px $grid 0
+
+.article
+  margin-top: 12px
+  color: $color-input
+
+.price
+  font-weight: bold
+  line-height: 28px
+  margin: $grid-small 0
+  font-size: 21px
+  display: block
+  color: black
+
+.catalogQtyBlock
+  margin: 12px 0
+
+.catalogQtyBlock .catalogPlus, .catalogQtyBlock .catalogMinus
+  vertical-align: middle
+  display: inline-block
+  height: 19px
+  width: 19px
+
+.catalogQtyBlock .catalogPlus, .catalogQtyBlock .catalogMinus
+  background: url(../images/dist/plusMinusCatalog.png) 0 0 no-repeat #424242
+
+.catalogQtyBlock .catalogQty
+  background-color: #e7e8ea
+  color: black
+  box-sizing: border-box
+  vertical-align: middle
+  display: inline-block
+  text-align: center
+  font-size: 12px
+  margin: 0 2px
+  height: 19px
+  width: 40px
+  padding: 0 2px
+  border: 0
+
+.catalogQtyBlock .catalogPlus
+  background-position: 0 -19px
+
+
+// ------------------------------ modalAddProduct ------------------------------- //
+.modalAddProduct
+
+  .block__head, .modalAddProduct__footer
+    background: $modal-bg-head
+    color: white
+    overflow: hidden
+
+  &__info
+
+    .link-grey
+      font-size: 14px
+      max-width: 300px
+      display: block
+      margin-bottom: 18px
+
+  .modal__wrap
+    height: 400px
+    width: 700px
+
+  .block__head, &__footer
+    height: 60px
+    line-height: 60px
+
+  &__body
+    position: relative
+    overflow: hidden
+    padding: $grid
+
+    .rating
+      right: $grid
+      top: $grid-small
+
+  &__block
+    align-items: center
+    height: 232px
+
+  &__sum
+    font-weight: bold
+    line-height: 50px
+    padding: 0 24px
+    font-size: 18px
+    height: 50px
+    background-color: #fbfbfb
+
+  &__footer
+
+    .tools
+      border-collapse: collapse
+      table-layout: fixed
+      border-spacing: 0
+      width: 100%
+
+      .icon
+        font-size: 14px
+        vertical-align: top
+        text-align: center
+        line-height: 60px
+        height: 60px
+        width: 70px
+        border-right: 1px solid #4c4c4c
+        overflow: hidden
+        
+        &:hover
+          background: $black-drop
+          
+        
+        a
+          color: $footer-color
+
+      .continue, .goToBasket
+        width: 50% 
+        text-align: center
+
+      .continue:hover
+        background: $black-drop
+
+      a.closeWindow, a.goToLinc
+        line-height: 60px
+        font-size: 14px
+        display: inline-block
+        color: $footer-color
+
+      .goToBasket
+        background: $red
+    

@@ -1,0 +1,173 @@
+@import _base
+
+.products
+  //position: relative
+  border-top: 1px solid $border-input
+  display: flex
+  flex-direction: column
+  flex: 1 0 auto
+
+  &__mobil
+    box-sizing: border-box
+    border-bottom: 1px solid $bg-btn-def-hover
+    background-color: $bg-m
+    line-height: 50px
+    overflow: hidden
+    height: 50px
+    display: none
+    
+    .products-tabs__item
+      border-right: 1px solid $bg-btn-def-hover
+      text-transform: uppercase
+      white-space: nowrap
+
+  &__wrap
+    flex-wrap: nowrap
+    flex: 1 0 auto
+
+  &__column-1
+    background-color: $search-solid
+    position: relative
+    padding-left: $grid
+    width: 360px
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+  &__column-2
+    flex: 1
+    padding-bottom: $grid
+
+    .h2
+      padding-top: 36px
+      border-top: 1px solid $bg-btn-def-hover
+
+  &__column-3
+    box-sizing: border-box
+    background-color: $search-solid
+    padding: $grid $grid 0 $grid
+    position: relative
+    width: 400px
+    z-index: 1
+
+.products-tabs
+  text-align: right
+
+  &__stop
+    flex: 0 0 auto
+
+.products-tabs__item
+  transition: all 0.2s ease-in-out
+  padding: 0
+
+  a
+    display: inline-block
+    padding: 16px 24px
+    font-size: 13px
+    color: black
+
+.products-tabs__item.active>a
+  background: white
+  
+.fixed .products-tabs, .fixed .fixContainer
+  position: fixed
+  top: 0
+  width: inherit
+
+.addCart.products-btn, .addCartClick
+  width: 220px
+  
+.browse
+
+  &__col-1
+    position: relative
+    padding: $grid 0
+    width: 50%
+  
+  &__label
+    position: absolute
+    z-index: 2
+    right: 30px
+    top: 24px
+
+    .btn
+      display: block
+      padding: 0
+      width: 34px
+      line-height: 32px
+      margin-bottom: 8px
+
+  &__col-2
+    // padding-right: $grid
+
+    .rating
+      display: inline-block
+      vertical-align: middle
+      margin-left: 6px
+      margin-top: -4px
+      position: relative
+      overflow: hidden
+      height: 15px
+      z-index: 
+      top: 0
+      right: 0
+
+.brend
+  display: block
+
+  &__link
+    display: inline-block
+    margin: $grid 0
+
+  &__img
+    max-height: 36px
+    max-width: 200px
+
+.reviews
+  padding-bottom: 6px
+  border-bottom: 1px solid #e8e8e8
+  margin-top: 6px
+
+  &__row
+    display: inline-block
+    margin: 0 36px 12px 0
+    font-size: 13px
+
+.properties
+  // padding: 0 $grid
+
+  &__table
+    width: 100%
+    margin-bottom: $grid
+    border-collapse: collapse
+    table-layout: fixed
+
+    caption
+      text-align: left
+      font-size: 18px
+      padding: 12px 0
+
+    tr
+      border: 1px solid $nav-icon-color
+
+      &:nth-of-type(odd)
+        background: $bg-m
+
+      &:hover td
+        background: #eee
+
+    td
+      padding: 6px 0
+      transition: all 0.2s ease-in-out
+
+      &:not(.name)
+        padding-left: 10%
+
+    .name
+      text-overflow: ellipsis
+      // white-space: nowrap
+      padding-left: $grid-small
+      overflow: hidden
+      width: 40%
+
+

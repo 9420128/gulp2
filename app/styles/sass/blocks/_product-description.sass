@@ -1,0 +1,35 @@
+@import _base
+
+.desc
+  margin-top: $grid
+
+  &__row-head
+  margin: $grid 0 $grid-small 0
+
+  &__row
+    font-size: 13px
+    display: flex
+    align-items: flex-end
+
+  &__name
+    width: 60%
+
+    &:after
+      border-bottom: 1px dotted #cccccc
+      position: absolute
+      margin-left: 12px
+      height: 13px
+      content: ''
+      width: 100%
+
+  &__name, &__value
+    background-color: #ffffff
+    position: relative
+    overflow: hidden
+    padding: 4px 0
+
+  &__value
+    padding-left: $grid-small
+
+.desc-block-head
+  padding-bottom: $grid-small

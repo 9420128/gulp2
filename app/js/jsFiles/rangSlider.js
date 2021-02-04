@@ -1,4 +1,4 @@
-;(function ($) {
+(function ($) {
     jQuery.fn.rangeSlider = function (options) {
         var options = $.extend(
             {
